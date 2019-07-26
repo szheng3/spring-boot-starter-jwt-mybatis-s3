@@ -1,0 +1,14 @@
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/configuration/MyTokenFactory.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/controllers/BillControllerTest.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/services/AWSDocumentServiceImplTest.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/mapper/DAO/UserMapperTest.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/configuration/tokenrequest/UserTokenRequest.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/controllers/UserControllerTest.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/services/AccountServiceTest.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/controller/jwtControllerTest.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/controllers/FileControllerTest.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/configuration/tokenrequest/ClientTokenRequest.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/AccountingApplicationTests.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/configuration/JwtCommonTest.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/configuration/tokenrequest/JwtTokenRequest.java
+/Users/shuai/DigitalSoftware/backend/src/test/java/com/digitalsoftware/accounting/controllers/TestComtrollerTest.java

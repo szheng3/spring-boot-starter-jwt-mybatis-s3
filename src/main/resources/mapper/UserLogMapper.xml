@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.digitalsoftware.accounting.mapper.DAO.UserLogMapper">
+    <select id="findAllByMethods" resultType="com.digitalsoftware.accounting.domain.models.LogDTO">
+        select
+        *,
+        status_code as "statusCode"
+        from user_log join ip_details detail on user_log.ip = detail.ip
+        <if test="methods!=null">
+            where method in
+            <foreach item="id" collection="methods" open="(" separator="," close=")">
+                #{id}
+            </foreach>
+        </if>
+    </select>
+</mapper>

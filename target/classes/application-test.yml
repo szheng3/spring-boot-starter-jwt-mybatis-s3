@@ -1,0 +1,77 @@
+security:
+    oauth2:
+        resource:
+            id: oauth2_id
+spring:
+    cache:
+        type: redis
+    datasource:
+        driverClassName: org.h2.Driver
+        password: ''
+        url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL
+        username: sa
+#    datasource:
+#        driver-class-name: com.mysql.jdbc.Driver
+#        hikari:
+#            idle-timeout: 10000
+#            maximumPoolSize: 30
+#            minimum-idle: 10
+#        password: password
+#        url: jdbc:mysql://localhost:3306/portfolio?useSSL=false
+#        username: root
+    freemarker:
+        checkTemplateLocation: false
+    h2:
+        console:
+            enabled: true
+    main:
+        banner-mode: 'off'
+    output:
+        ansi:
+            enabled: ALWAYS
+    redis:
+        host: localhost
+        port: 6379
+
+logging:
+    file: logs/spring-boot-logging.log
+    level:
+        com:
+            digitalsoftware:
+                accounting:
+                    mapper: debug
+        org:
+            springframework: WARN
+#通用插件
+mapper:
+    identity: MYSQL
+    mappers: tk.mybatis.mapper.common.Mapper
+    not-empty: false
+#enum
+mybatis:
+    type-handlers-package: com.springboot.mybatis.demo.emun.typeHandler
+    mapper-locations: classpath:mapper/*.xml
+    config-location: classpath:mybatis-config.xml
+
+#pagehelper分页插件配置
+pagehelper:
+    helperDialect: mysql
+    params: count=countSql
+    reasonable: true
+    supportMethodsArguments: true
+
+#domain
+my:
+    domain: sszzz.me:8080/api
+    GeoIP2: classpath:GeoLite2-City.mmdb
+
+
+oauth2:
+    clientId: trusted-app
+    secret: secret
+
+s3:
+    accessKey: 1
+    bucketName: 1
+    region: 1
+    secretKey: 1

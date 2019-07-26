@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.digitalsoftware.accounting.mapper.DAO.UserMapperTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.516 s - in com.digitalsoftware.accounting.mapper.DAO.UserMapperTest

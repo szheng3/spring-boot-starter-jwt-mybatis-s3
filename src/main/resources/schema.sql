@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS `ip_details`;
+CREATE TABLE `ip_details` (`ip` varchar(45) NOT NULL,`country` varchar(45) DEFAULT NULL,`subdivision` varchar(45) DEFAULT NULL,`city` varchar(45) DEFAULT NULL,`latitude` varchar(45) DEFAULT NULL,`longitude` varchar(45) DEFAULT NULL,PRIMARY KEY (`ip`));
+INSERT INTO `ip_details` VALUES ('127.0.0.1','111','111','Unknown','111','111');
+DROP TABLE IF EXISTS `role`;
+CREATE TABLE `role` (`id` int(11) NOT NULL AUTO_INCREMENT,`role` tinyint(2) DEFAULT NULL COMMENT 'ROLE_USER((byte) 0), ROLE_ADMIN((byte) 1), ROLE_TRUSTED_CLIENT((byte) 2);',PRIMARY KEY (`id`));
+INSERT INTO `role` VALUES (117,1),(118,0),(119,3),(120,2);
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (`id` int(11) NOT NULL AUTO_INCREMENT,`avatar` varchar(255) DEFAULT NULL COMMENT '头像',`phone` varchar(45) DEFAULT NULL,`password` varchar(255) DEFAULT NULL,`nickname` varchar(45) DEFAULT NULL,`details` text,PRIMARY KEY (`id`));
+INSERT INTO `user` VALUES (93,NULL,'testUser2','$2a$10$9CiGNVVwfM8JRg44zfX9D.kucIKgYeCyHKCcrpY9wBOxGJ7Od9F4K','test',NULL),(94,NULL,'testAdmin','$2a$10$l6ApzwiteWnO6ZMHUftzpu/KVrnfW1kyYtcVZDxldLYx3pvjttcYy','test',NULL),(95,NULL,'13333333333','$2a$10$It5VrYJIlOjrRpJn6Ox7r.D5ZLF5eFBQFmRP66yfLGZtbkAPkg8X.',NULL,NULL);
+DROP TABLE IF EXISTS `user_has_role`;
+CREATE TABLE `user_has_role` (`user_id` int(11) NOT NULL,`role_id` int(11) NOT NULL,PRIMARY KEY (`user_id`,`role_id`),KEY FK_USER_HAS_ROLE_ROLE1_IDX_0 (`role_id`),KEY FK_USER_HAS_ROLE_USER1_IDX_0 (`user_id`));
+INSERT INTO `user_has_role` VALUES (94,117),(93,118),(95,118);
+DROP TABLE IF EXISTS `user_log`;
+CREATE TABLE `user_log` (`id` int(11) NOT NULL AUTO_INCREMENT,`uid` int(11) DEFAULT NULL,`url` varchar(100) DEFAULT NULL,`method` varchar(45) DEFAULT NULL,`duration` varchar(45) DEFAULT NULL,`date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,`os` varchar(45) DEFAULT NULL,`brower` varchar(45) DEFAULT NULL,`ip` varchar(45) NOT NULL,`status_code` varchar(4) DEFAULT NULL,PRIMARY KEY (`id`),KEY FK_USER_LOG_USER1_IDX_0 (`uid`),KEY FK_USER_LOG_IP_DETAILS1_IDX_0 (`ip`));
+INSERT INTO `user_log` VALUES (10,NULL,'/api/image/8019a130a0b811e8bb4eb147d61cde97.gif','GET','544','2018-08-16 20:25:49','Mac OS X','Safari 11','',NULL);

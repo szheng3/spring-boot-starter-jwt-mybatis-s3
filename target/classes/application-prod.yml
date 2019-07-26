@@ -1,0 +1,74 @@
+spring:
+    cache:
+        type: redis
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        hikari:
+            idle-timeout: 10000
+            maximumPoolSize: 30
+            minimum-idle: 10
+        password: MseqG2zDVCyroDGgNfXRMpyf
+        url: jdbc:mysql://mysql:3306/accounting?useSSL=false
+        username: root
+    freemarker:
+        checkTemplateLocation: false
+    main:
+        banner-mode: 'off'
+    output:
+        ansi:
+            enabled: ALWAYS
+    redis:
+        host: 172.105.198.16
+        password: password
+        port: 6379
+        lettuce:
+          pool:
+            max-active: 8
+            max-wait: -1ms
+            max-idle: 8
+            min-idle: 0
+    servlet:
+      multipart:
+        max-file-size: 200MB
+        max-request-size: 200MB
+oauth2:
+    clientId: trusted-app
+    secret: secret
+security:
+    oauth2:
+        resource:
+            id: oauth2_id
+logging:
+    file: /logs/spring-boot-logging.log
+    level:
+        com:
+            digitalsoftware:
+                accounting:
+                    mapper: debug
+        org:
+            springframework: WARN
+mapper:
+    identity: MYSQL
+    mappers: tk.mybatis.mapper.common.Mapper
+    not-empty: false
+mybatis:
+    type-handlers-package: com.springboot.mybatis.demo.emun.typeHandler
+    mapper-locations: classpath:mapper/*.xml
+    config-location: classpath:mybatis-config.xml
+
+
+pagehelper:
+    helperDialect: mysql
+    params: count=countSql
+    reasonable: true
+    supportMethodsArguments: true
+s3:
+    accessKey: 1
+    bucketName: 1
+    region: 1
+    secretKey: 1
+my:
+    domain: sszzz.me:8080/api
+    GeoIP2: classpath:GeoLite2-City.mmdb
+
+

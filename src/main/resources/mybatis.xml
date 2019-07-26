@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <properties resource="mybatis.properties"/>
+
+    <classPathEntry
+            location="/Users/shuai/.m2/repository/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar"/>
+
+    <context id="context" targetRuntime="MyBatis3" defaultModelType="flat">
+        <!--<property name="autoDelimitKeywords" value="true"/>-->
+        <!--<plugin type="tk.mybatis.mapper.generator.MapperPlugin">-->
+        <!--<property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>-->
+        <!--&lt;!&ndash; caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true &ndash;&gt;-->
+        <!--<property name="caseSensitive" value="true"/>-->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!--</plugin>-->
+
+        <!--通用 Mapper 插件，可以生成带注解的实体类-->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.digitalsoftware.accounting.mapper.MyMapper"/>
+            <property name="caseSensitive" value="true"/>
+            <property name="forceAnnotation" value="true"/>
+            <property name="beginningDelimiter" value="`"/>
+            <property name="endingDelimiter" value="`"/>
+        </plugin>
+
+        <!--&lt;!&ndash;通用代码生成器插件&ndash;&gt;-->
+        <!--<plugin type="tk.mybatis.mapper.generator.TemplateFilePlugin">-->
+        <!--<property name="targetProject" value="src/test/java"/>-->
+        <!--<property name="targetPackage" value="test.mapper"/>-->
+        <!--<property name="templatePath" value="generator/mapper.ftl"/>-->
+        <!--<property name="mapperSuffix" value="Dao"/>-->
+        <!--<property name="fileName" value="${tableClass.shortClassName}${mapperSuffix}.java"/>-->
+        <!--</plugin>-->
+
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="false"/>
+        </commentGenerator>
+
+        <jdbcConnection userId="${username}" password="password" driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/accounting?useSSL=false"/>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.digitalsoftware.accounting.domain.generated"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="false"/>
+            <property name="constructorBased" value="true"/>
+            <property name="rootClass" value="com.digitalsoftware.accounting.domain.RootEntity"/>
+        </javaModelGenerator>
+
+        <!--<javaClientGenerator targetPackage="com.digitalsoftware.accounting.mapper.generated" type="ANNOTATEDMAPPER" targetProject="src/main/java">-->
+        <!--<property name="enableSubPackages" value="true"/>-->
+        <!--&lt;!&ndash;<property name="rootInterface" value="com.digitalsoftware.accounting.mapper.RootMapper"/>&ndash;&gt;-->
+        <!--</javaClientGenerator>-->
+
+
+        <!--<table schema="accounting" tableName="user_has_role" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false"/>-->
+        <!--<table schema="accounting" tableName="address" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false"/>-->
+        <!--<table schema="accounting" tableName="billing" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false">-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--<columnOverride column="status" jdbcType="TINYINT"-->
+        <!--typeHandler="com.digitalsoftware.accounting.emun.typeHandler.StatusStateTypeByteHandler"-->
+        <!--javaType="com.digitalsoftware.accounting.emun.domain.StatusState"/>-->
+        <!--<columnOverride column="amount_type" jdbcType="TINYINT"-->
+        <!--typeHandler="com.digitalsoftware.accounting.emun.typeHandler.AmountTypeByteHandler"-->
+        <!--javaType="com.digitalsoftware.accounting.emun.domain.AmountType"/>-->
+        <!--</table>-->
+        <!--<table schema="accounting" tableName="billing_person" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false">-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--<columnOverride column="status"-->
+        <!--typeHandler="com.digitalsoftware.accounting.emun.typeHandler.StatusStateTypeByteHandler"-->
+        <!--javaType="com.digitalsoftware.accounting.emun.domain.StatusState"/>-->
+        <!--</table>-->
+        <!--<table schema="accounting" tableName="billing_person_has_address" enableCountByExample="false"-->
+        <!--enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>-->
+        <!--<table schema="accounting" tableName="login_log" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false"/>-->
+        <!--<table schema="accounting" tableName="ip_details" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false"/>-->
+        <!--<table schema="accounting" tableName="menu" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false"/>-->
+        <!--<table schema="accounting" tableName="role" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false">-->
+        <!--<columnOverride column="role"-->
+        <!--typeHandler="com.digitalsoftware.accounting.emun.typeHandler.RoleTypeByteHandler"-->
+        <!--javaType="com.digitalsoftware.accounting.emun.domain.RoleType"/>-->
+        <!--</table>-->
+        <!--<table schema="accounting" tableName="role_has_menu" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false"/>-->
+        <!--<table schema="accounting" tableName="user" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false">-->
+        <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table schema="accounting" tableName="user_has_role" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false"/>-->
+        <!--<table schema="accounting" tableName="user_log" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false"/>-->
+        <!--<table schema="accounting" tableName="ip_details" enableCountByExample="false" enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false" enableUpdateByExample="false"/>-->
+
+
+    </context>
+</generatorConfiguration>

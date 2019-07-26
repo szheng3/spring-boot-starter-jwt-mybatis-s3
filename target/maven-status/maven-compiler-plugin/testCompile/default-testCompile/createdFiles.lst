@@ -1,0 +1,16 @@
+com/digitalsoftware/accounting/configuration/MyTokenFactory.class
+com/digitalsoftware/accounting/configuration/JwtCommonTest$OauthType.class
+com/digitalsoftware/accounting/configuration/tokenrequest/ClientTokenRequest.class
+com/digitalsoftware/accounting/mapper/DAO/UserMapperTest.class
+com/digitalsoftware/accounting/services/AccountServiceTest.class
+com/digitalsoftware/accounting/configuration/MyTokenFactory$MyToken.class
+com/digitalsoftware/accounting/controllers/BillControllerTest.class
+com/digitalsoftware/accounting/controllers/UserControllerTest.class
+com/digitalsoftware/accounting/controller/JwtControllerTest.class
+com/digitalsoftware/accounting/configuration/JwtCommonTest.class
+com/digitalsoftware/accounting/configuration/tokenrequest/UserTokenRequest.class
+com/digitalsoftware/accounting/configuration/tokenrequest/JwtTokenRequest.class
+com/digitalsoftware/accounting/AccountingApplicationTests.class
+com/digitalsoftware/accounting/configuration/MyTokenFactory$1.class
+com/digitalsoftware/accounting/services/AWSDocumentServiceImplTest.class
+com/digitalsoftware/accounting/controllers/FileControllerTest.class

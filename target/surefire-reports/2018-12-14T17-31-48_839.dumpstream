@@ -1,0 +1,15 @@
+# Created on 2018-12-14T17:31:48.840
+WARNING: An illegal reflective access operation has occurred
+
+# Created on 2018-12-14T17:31:48.840
+WARNING: Illegal reflective access by org.apache.ibatis.reflection.Reflector (file:/Users/shuai/.m2/repository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar) to method java.lang.Class.checkPackageAccess(java.lang.SecurityManager,java.lang.ClassLoader,boolean)
+
+# Created on 2018-12-14T17:31:48.841
+WARNING: Please consider reporting this to the maintainers of org.apache.ibatis.reflection.Reflector
+
+# Created on 2018-12-14T17:31:48.841
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+
+# Created on 2018-12-14T17:31:48.841
+WARNING: All illegal access operations will be denied in a future release
+
